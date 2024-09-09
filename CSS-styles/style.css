@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary: #1f314f;
+	--secondary: #68778d;
+	--grayish-blue: #d5e1ef;
+	--white: #ffffff;
+	--font-family: "Outfit", sans-serif;
+	--font-size-main: 22px;
+	--font-size-secondary: 15px;
+	--font-main-weight: 700;
+	--font-secondary-weight: 400;
+	--font-main-line-height: 120%;
+	--font-secondary-line-height: 140%;
+	--font-main-letter-spacing: 0px;
+	--font-secondary-letter-spacing: 0.2px;
+	--spacing-large: 40px;
+	--spacing-medium: 24px;
+	--spacing-small: 16px;
+	--card-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+	--card-shadow-hover: 0px 25px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+	background-color: var(--grayish-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    position: relative;
+}
+
+.card-wrapper {
+	background-color: var(--white);
+	width: 320px;
+	border-radius: 20px;
+	box-shadow: var(--card-shadow);
+	padding: var(--spacing-small);
+	padding-bottom: var(--spacing-large);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-medium);
+}
+.card-wrapper:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+	transition: all 0.2s ease-in-out;
+	box-shadow: var(--card-shadow-hover);
+}
+
+.img-wrapper img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	overflow: hidden;
+	object-position: center;
+	object-fit: cover;
+}
+
+.content-wrapper {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-small);
+	padding: 0 var(--spacing-small);
+	font-family: var(--font-family);
+}
+
+.content-wrapper h3 {
+	font-size: var(--font-size-main);
+	font-weight: var(--font-main-weight);
+	line-height: var(--font-main-line-height);
+	letter-spacing: var(--font-main-letter-spacing);
+	color: var(--primary);
+}
+
+.content-wrapper p {
+	font-size: var(--font-size-secondary);
+	font-weight: var(--font-secondary-weight);
+	line-height: var(--font-secondary-line-height);
+	letter-spacing: var(--font-secondary-letter-spacing);
+	color: var(--secondary);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
